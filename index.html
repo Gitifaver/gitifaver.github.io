@@ -118,6 +118,12 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 16px;
         }
         
         .article-content {
@@ -212,6 +218,11 @@
             object-fit: cover;
             margin: 0 auto 15px;
             display: block;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
         }
         
         .categories-list, .popular-posts {
@@ -415,7 +426,9 @@
         <!-- 文章列表 -->
         <section class="articles">
             <article class="article-card">
-                <img src="https://via.placeholder.com/800x400" alt="文章配图" class="article-image">
+                <div class="article-image">
+                    <i class="fas fa-image"></i> 文章配图
+                </div>
                 <div class="article-content">
                     <h2 class="article-title"><a href="#">如何提高前端开发效率</a></h2>
                     <div class="article-meta">
@@ -443,7 +456,9 @@
             </article>
 
             <article class="article-card">
-                <img src="https://via.placeholder.com/800x400" alt="文章配图" class="article-image">
+                <div class="article-image">
+                    <i class="fas fa-image"></i> 文章配图
+                </div>
                 <div class="article-content">
                     <h2 class="article-title"><a href="#">响应式设计的最佳实践</a></h2>
                     <div class="article-meta">
@@ -471,7 +486,9 @@
             </article>
 
             <article class="article-card">
-                <img src="https://via.placeholder.com/800x400" alt="文章配图" class="article-image">
+                <div class="article-image">
+                    <i class="fas fa-image"></i> 文章配图
+                </div>
                 <div class="article-content">
                     <h2 class="article-title"><a href="#">JavaScript ES6+ 新特性详解</a></h2>
                     <div class="article-meta">
@@ -506,7 +523,9 @@
                     <i class="fas fa-user"></i>
                     关于我
                 </h3>
-                <img src="https://via.placeholder.com/100" alt="个人头像" class="profile-img">
+                <div class="profile-img">
+                    <i class="fas fa-user"></i>
+                </div>
                 <p>一名热爱技术的全栈开发者，专注于Web开发和技术分享。</p>
             </div>
 
