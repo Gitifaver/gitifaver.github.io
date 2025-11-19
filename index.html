@@ -19,6 +19,9 @@
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         a {
@@ -92,6 +95,7 @@
         .main-content {
             display: flex;
             margin: 30px 0;
+            flex: 1;
         }
         
         /* 文章列表 */
@@ -107,6 +111,7 @@
             margin-bottom: 25px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
         }
         
         .article-card:hover {
@@ -128,11 +133,13 @@
         
         .article-content {
             padding: 20px;
+            text-align: left;
         }
         
         .article-title {
             font-size: 22px;
             margin-bottom: 10px;
+            text-align: center;
         }
         
         .article-meta {
@@ -142,6 +149,7 @@
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+            justify-content: center;
         }
         
         .meta-item {
@@ -158,6 +166,8 @@
         .article-excerpt {
             color: #555;
             margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.7;
         }
         
         .read-more {
@@ -169,6 +179,7 @@
             border-radius: 4px;
             font-weight: 500;
             transition: background-color 0.3s;
+            margin: 0 auto;
         }
         
         .read-more i {
@@ -191,6 +202,7 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             padding: 20px;
             margin-bottom: 25px;
+            text-align: center;
         }
         
         .widget-title {
@@ -200,6 +212,7 @@
             border-bottom: 1px solid #eee;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
         
         .widget-title i {
@@ -217,16 +230,17 @@
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 15px;
-            display: block;
-            background-color: #e9ecef;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #e9ecef;
             color: #6c757d;
+            font-size: 24px;
         }
         
         .categories-list, .popular-posts {
             list-style: none;
+            text-align: left;
         }
         
         .categories-list li, .popular-posts li {
@@ -254,6 +268,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            justify-content: center;
         }
         
         .tag {
@@ -281,6 +296,7 @@
             background-color: #2c3e50;
             color: #ecf0f1;
             padding: 40px 0 20px;
+            margin-top: auto;
         }
         
         .footer-content {
@@ -293,6 +309,7 @@
             flex: 1;
             min-width: 250px;
             margin-bottom: 20px;
+            text-align: center;
         }
         
         .footer-section h3 {
@@ -300,6 +317,7 @@
             font-size: 18px;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
         
         .footer-section h3 i {
@@ -314,6 +332,7 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
         
         .footer-links i {
@@ -334,6 +353,7 @@
         .social-links {
             display: flex;
             gap: 15px;
+            justify-content: center;
         }
         
         .social-icon {
@@ -386,6 +406,7 @@
             
             .nav-links {
                 margin-top: 15px;
+                justify-content: center;
             }
             
             .nav-links li {
@@ -394,12 +415,40 @@
             
             .article-meta {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
             
             .meta-item {
                 margin-bottom: 5px;
             }
+            
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-section {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        /* 新增居中样式 */
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .btn-center {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -434,7 +483,7 @@
                     <div class="article-meta">
                         <div class="meta-item">
                             <i class="far fa-calendar"></i>
-                            <span>2023年10月15日</span>
+                            <span>2025年10月15日</span>
                         </div>
                         <div class="meta-item">
                             <i class="far fa-folder"></i>
@@ -446,12 +495,14 @@
                         </div>
                     </div>
                     <p class="article-excerpt">
-                        在现代Web开发中，提高开发效率是每个开发者追求的目标。本文将分享一些实用的工具和技巧，帮助您在前端开发中节省时间，提高工作效率。
+                        在现代Web开发中，提高开发效率是每个开发者追求的目标。本文将分享一些实用的工具和技巧，帮助您在前端开发中节省时间，提高工作效率。从代码编辑器的选择到自动化工具的运用，我们将全面探讨如何优化开发流程。
                     </p>
-                    <a href="#" class="read-more">
-                        阅读更多
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <div class="btn-center">
+                        <a href="#" class="read-more">
+                            阅读更多
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
 
@@ -464,7 +515,7 @@
                     <div class="article-meta">
                         <div class="meta-item">
                             <i class="far fa-calendar"></i>
-                            <span>2023年10月10日</span>
+                            <span>2025年10月10日</span>
                         </div>
                         <div class="meta-item">
                             <i class="far fa-folder"></i>
@@ -476,12 +527,14 @@
                         </div>
                     </div>
                     <p class="article-excerpt">
-                        随着移动设备的普及，响应式设计已成为现代网站开发的标准。本文将探讨响应式设计的基本原则、常见模式以及实现技巧。
+                        随着移动设备的普及，响应式设计已成为现代网站开发的标准。本文将探讨响应式设计的基本原则、常见模式以及实现技巧。我们将深入了解媒体查询、弹性布局和移动优先策略，帮助您创建在各种设备上都能完美展示的网站。
                     </p>
-                    <a href="#" class="read-more">
-                        阅读更多
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <div class="btn-center">
+                        <a href="#" class="read-more">
+                            阅读更多
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
 
@@ -494,7 +547,7 @@
                     <div class="article-meta">
                         <div class="meta-item">
                             <i class="far fa-calendar"></i>
-                            <span>2023年10月5日</span>
+                            <span>2025年10月5日</span>
                         </div>
                         <div class="meta-item">
                             <i class="far fa-folder"></i>
@@ -506,12 +559,14 @@
                         </div>
                     </div>
                     <p class="article-excerpt">
-                        ECMAScript 6及后续版本为JavaScript带来了许多强大的新特性。本文将详细介绍这些新特性，并通过实例展示如何在实际开发中应用它们。
+                        ECMAScript 6及后续版本为JavaScript带来了许多强大的新特性。本文将详细介绍这些新特性，并通过实例展示如何在实际开发中应用它们。从箭头函数、模板字符串到异步编程和模块化，我们将全面探索现代JavaScript开发的精髓。
                     </p>
-                    <a href="#" class="read-more">
-                        阅读更多
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <div class="btn-center">
+                        <a href="#" class="read-more">
+                            阅读更多
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
         </section>
@@ -526,7 +581,7 @@
                 <div class="profile-img">
                     <i class="fas fa-user"></i>
                 </div>
-                <p>一名热爱技术的全栈开发者，专注于Web开发和技术分享。</p>
+                <p>一名热爱技术的全栈开发者，专注于Web开发和技术分享。拥有5年开发经验，热衷于探索新技术和最佳实践。</p>
             </div>
 
             <div class="sidebar-widget">
